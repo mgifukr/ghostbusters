@@ -32,7 +32,7 @@ body {
 }
 
 .search-input {
-   background-image: url(./img/search-icon.svg);
+   background-image: url(../img/search-icon.svg);
    background-repeat: no-repeat;
    background-position: center left;
    border: none;

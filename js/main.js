@@ -15,6 +15,9 @@ $(document).ready(function () {
    });
    var mySwiper = new Swiper('.swiper-container', {
       spaceBetween: 25,
+      navigation: {
+         nextEl: ".button-next",
+      },
       loop: true,
       breakpoints: {
          992: {
@@ -25,10 +28,9 @@ $(document).ready(function () {
          },
          320: {
             slidesPerView: 1,
-            navigation: {
-               nextEl: ".button-next",
-            },
+
          },
       },
+
    });
 });

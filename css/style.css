@@ -12,7 +12,6 @@ body {
 .header {
    display: flex;
    align-items: center;
-
    height: 104px;
    padding-left: 34px;
    border-bottom: 1px solid #d4d4d4;
@@ -72,6 +71,7 @@ body {
    margin-left: 34px;
    outline: 1px blue;
 }
+
 .navigation {
    margin-right: 44px;
    margin-left: auto;
@@ -337,10 +337,7 @@ body {
    margin-top: 0;
    margin-bottom: 65px;
 }
-.news-cards {
-   display: flex;
-   flex-wrap: wrap;
-}
+
 .news-card {
    flex-basis: 25%;
    padding: 30px;
@@ -348,6 +345,7 @@ body {
    margin-right: 30px;
    background: #ffffff;
    border-radius: 5px;
+   min-height: 170px;
 }
 .news-card:last-child {
    margin-right: 0;
@@ -414,6 +412,9 @@ body {
    .search-input {
       margin-right: auto;
    }
+   .navigation {
+      display: none;
+   }
    .film-title {
       font-size: 24px;
       line-height: 1.4;
@@ -454,25 +455,31 @@ body {
       display: none;
       flex-direction: column;
       align-items: center;
-      justify-content: space-around;
+      justify-content: start;
       position: fixed;
       background-color: #5671f6;
       left: 0;
       right: 0;
       top: 79px;
-      height: calc(100%-79px);
+      height: 90%;
       bottom: 0;
    }
    .m-menu.active {
       display: flex;
    }
+
    .search-input {
+      display: none;
       margin: 0;
       width: 260px;
-      height: 50px;
+      min-height: 50px;
       border-radius: 5px;
       border: none;
       background-image: none;
+      margin-top: 17%;
+   }
+   .search-input.active {
+      display: flex;
    }
 
    .navigation {
@@ -481,6 +488,14 @@ body {
       flex-direction: column;
       justify-content: center;
       margin: 0;
+      margin-top: 17%;
+   }
+   .navigation::after {
+      display: flex;
+      content: "";
+      width: 104px;
+      height: 1px;
+      background-color: #d4d4d4;
    }
    .navigation-link {
       color: #ffffff;
@@ -494,9 +509,10 @@ body {
       margin-bottom: 30px;
    }
    .navigation-link:last-child {
-      margin-bottom: 0;
+      margin-bottom: 63%;
    }
    .button-group {
+      margin-top: 20%;
       flex-direction: column;
       height: auto;
    }
@@ -521,10 +537,7 @@ body {
       padding-top: 50px;
       padding-bottom: 70px;
    }
-   .news-cards {
-      display: flex;
-      justify-content: space-between;
-   }
+
    .news-card {
       margin-right: 0;
       max-width: 90%;
@@ -605,5 +618,13 @@ body {
    }
    .section-news-title {
       margin-bottom: 40px;
+   }
+}
+@media (max-width: 576px) {
+   .search-input {
+      margin-top: 10%;
+   }
+   .navigation {
+      margin-top: 10%;
    }
 }

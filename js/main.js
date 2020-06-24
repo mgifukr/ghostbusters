@@ -2,7 +2,12 @@ $(document).ready(function () {
    const mMenuBtn = $('.m-menu-button');
    const mMenu = $('.m-menu');
    const tab = $('.tab');
+   const mSearchButton = $('.m-search-button');
+   mSearchButton.on('click', function () {
+      $('.search-input').toggleClass('active');
+   });
    mMenuBtn.on('click', function () {
+      $('.search-input').removeClass('active');
       mMenu.toggleClass('active');
       $('body').toggleClass('no-scroll');
    });
